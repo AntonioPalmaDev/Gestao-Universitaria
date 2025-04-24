@@ -48,6 +48,58 @@
             </tbody>
         </table>
     </section>
+    <main>
+        <h1>Matrícula</h1>
+      
+        <section class="form-section">
+            
+            
+            <input type="text" id="matriculaAluno" placeholder="Matrícula" />
+          
+            <!-- Curso será um select -->
+            <select id="cursoMat" onchange="carregarGradesMatricula()">
+              <option value="">Selecione o curso</option>
+              <!-- Cursos preenchidos via JS -->
+            </select>
+          
+            <!-- Grade também será um select -->
+            <select id="gradeMat" onchange="carregarDisciplinasMatricula()">
+              <option value="">Selecione a grade</option>
+            </select>
+          
+            <input type="text" id="semestreMat" placeholder="Semestre" />
+          
+            <!-- Lista de disciplinas (só visual) -->
+            <ul id="lista-disciplinas-mat"></ul>
+          
+            <button onclick="inserirMatricula()">Inserir</button>
+          </section>
+          
+      
+        <div class="search-container">
+          <input type="text" id="buscaMatricula" placeholder="Buscar matrícula ou nome..." oninput="filtrarMatricula()" />
+          <span class="lupa-icon">🔍</span>
+        </div>
+      
+        <section class="tabela-section">
+          <table>
+            <thead>
+              <tr>
+                <th>NOME</th>
+                <th>MATRICULA</th>
+                <th>CURSO</th>
+                <th>GRADE-CURRICULAR</th>
+                <th>SEMESTRE</th>
+                <th>DISCIPLINAS</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-matriculas"></tbody>
+          </table>
+        </section>
+      </main>
+      
+
+
 
     <script src="matricula.js"></script>
 </body>

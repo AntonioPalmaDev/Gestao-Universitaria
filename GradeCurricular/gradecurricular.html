@@ -17,6 +17,7 @@
     </header>
   
 
+<<<<<<< HEAD
     <section id="form-grade">
         <h2>Adicionar Disciplina</h2>
         <form id="gradeForm">
@@ -34,6 +35,48 @@
 
     <section id="lista-grade">
         <h2>Disciplinas do Curso</h2>
+=======
+    <main>
+        <h1>GRADE CURRICULAR</h1>
+      
+        <section class="form-section">
+          <input type="text" id="identificacao" placeholder="Identificação da Grade" />
+          <input type="text" id="curso" placeholder="Curso" />
+          
+          <div class="disciplinas-box">
+            <input type="text" id="disciplina" placeholder="Adicionar Disciplina" />
+            <button onclick="adicionarDisciplina()">Adicionar Disciplina</button>
+          </div>
+      
+          <ul id="lista-disciplinas"></ul>
+      
+          <button onclick="inserirGrade()">Inserir Grade</button>
+        </section>
+      
+        <section class="tabela-section">
+            <div class="search-container">
+                <input type="text" id="busca" placeholder="Buscar grade..." oninput="filtrarTabela()" />
+                <span class="lupa-icon">🔍</span>
+              </div>
+              
+          <table>
+            <thead>
+              <tr>
+                <th>GRADE-CURRICULAR</th>
+                <th>CURSO</th>
+                <th>DISCIPLINAS</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-corpo">
+              <!-- Itens vão ser inseridos aqui -->
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+    <section id="lista-grade">
+        
+>>>>>>> 9a8e6af (removido page login e cadastro , adicionado nova interface matricula e grade curricular)
         <ul id="lista-disciplinas">
             <!-- Disciplinas serão carregadas via JS -->
         </ul>
