@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Universitaria</title>
+    <link rel="shortcut icon" href="../img/G-U-28-03-2025.png" type="image/x-icon">
+    <link rel="stylesheet" href="../faltasnotas/faltas&notas.css">
+</head>
+
+<body>
+    <header id="menu">
+        <a href="../index/index.html">
+            <img src="../img/G-U-28-03-2025.png" alt="logo" id="logo">
+        </a>
+        
+        
+    </header>
+  
+
+    <section id="form-faltas-notas">
+        <h2>Adicionar Nota / Falta</h2>
+        <form id="notasForm">
+            <label for="aluno">Aluno:</label>
+            <select id="aluno" required>
+                <option value="">Selecione</option>
+            </select>
+
+            <label for="nota">Nota:</label>
+            <input type="number" step="0.1" id="nota" min="0" max="10">
+
+            <label for="falta">Faltas:</label>
+            <input type="number" id="falta" min="0">
+
+            <button type="submit">Salvar</button>
+        </form>
+    </section>
+
+    <section id="lista-notas">
+        <h2>Histórico de Notas e Faltas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aluno</th>
+                    <th>Nota</th>
+                    <th>Faltas</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-notas">
+                <!-- Dados serão carregados via JS -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="faltas_notas.js"></script>
+</body>
+</html>
+
+</body>
+</html>

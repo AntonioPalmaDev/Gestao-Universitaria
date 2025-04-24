@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Universitaria</title>
+    <link rel="shortcut icon" href="../img/G-U-28-03-2025.png" type="image/x-icon">
+    <link rel="stylesheet" href="../matricula/matricula.css">
+</head>
+<body>
+    <header id="menu">
+        <a href="../index/index.html">
+            <img src="../img/G-U-28-03-2025.png" alt="logo" id="logo">
+        </a>
+        
+    </header>
+
+
+    <section id="form-matricula">
+        <h2>Nova Matrícula</h2>
+        <form id="matriculaForm">
+            <label for="matricula">Matrícula do Aluno:</label>
+            <input type="number" id="matricula" required>
+
+            <label for="turma">Turma:</label>
+            <select id="turma" required>
+                <option value="">Selecione</option>
+                <!-- Opções serão carregadas via JS -->
+            </select>
+
+            <button type="submit">Matricular</button>
+        </form>
+    </section>
+
+    <section id="lista-matriculas">
+        <h2>Matrículas Registradas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Aluno</th>
+                    <th>Turma</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-matriculas">
+                <!-- Dados serão inseridos aqui -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="matricula.js"></script>
+</body>
+</html>
+
+    </header>
+    
+</body>
+</html>

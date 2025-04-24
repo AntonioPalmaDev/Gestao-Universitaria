@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Universitaria</title>
+    <link rel="shortcut icon" href="../img/G-U-28-03-2025.png" type="image/x-icon">
+    <link rel="stylesheet" href="../GradeCurricular/gradecurricular.css">
+</head>
+<body>
+    <header id="menu">
+        <a href="../index/index.html">
+            <img src="../img/G-U-28-03-2025.png" alt="logo" id="logo">
+        </a>
+        
+        
+    </header>
+  
+
+    <section id="form-grade">
+        <h2>Adicionar Disciplina</h2>
+        <form id="gradeForm">
+            <label for="curso">Curso:</label>
+            <select id="curso" required>
+                <option value="">Selecione</option>
+            </select>
+
+            <label for="disciplina">Disciplina:</label>
+            <input type="text" id="disciplina" required>
+
+            <button type="submit">Adicionar</button>
+        </form>
+    </section>
+
+    <section id="lista-grade">
+        <h2>Disciplinas do Curso</h2>
+        <ul id="lista-disciplinas">
+            <!-- Disciplinas serão carregadas via JS -->
+        </ul>
+    </section>
+
+    <script src="gradecurricular.js"></script>
+</body>
+</html>
+
+</body>
+</html>
