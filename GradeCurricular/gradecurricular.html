@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Universitaria</title>
+    <link rel="shortcut icon" href="../img/G-U-28-03-2025.png" type="image/x-icon">
+    <link rel="stylesheet" href="../GradeCurricular/gradecurricular.css">
+</head>
+<body>
+    <header id="menu">
+        <a href="../index/index.html">
+            <img src="../img/G-U-28-03-2025.png" alt="logo" id="logo">
+        </a>
+        
+        
+    </header>
+  
+
+    <main>
+        <h1>GRADE CURRICULAR</h1>
+      
+        <section class="form-section">
+          <input type="text" id="identificacao" placeholder="Identificação da Grade" />
+          <input type="text" id="curso" placeholder="Curso" />
+          
+          <div class="disciplinas-box">
+            <input type="text" id="disciplina" placeholder="Adicionar Disciplina" />
+            <button onclick="adicionarDisciplina()">Adicionar Disciplina</button>
+          </div>
+      
+          <ul id="lista-disciplinas"></ul>
+      
+          <button onclick="inserirGrade()">Inserir Grade</button>
+        </section>
+      
+        <section class="tabela-section">
+            <div class="search-container">
+                <input type="text" id="busca" placeholder="Buscar grade..." oninput="filtrarTabela()" />
+                <span class="lupa-icon">🔍</span>
+              </div>
+              
+          <table>
+            <thead>
+              <tr>
+                <th>GRADE-CURRICULAR</th>
+                <th>CURSO</th>
+                <th>DISCIPLINAS</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-corpo">
+              <!-- Itens vão ser inseridos aqui -->
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+    <section id="lista-grade">
+        
+        <ul id="lista-disciplinas">
+            <!-- Disciplinas serão carregadas via JS -->
+        </ul>
+    </section>
+
+    <script src="gradecurricular.js"></script>
+</body>
+</html>
+
+</body>
+</html>
