@@ -185,3 +185,30 @@
     td {
         background-color: #f9f9f9;
     }
+
+    .btn-editar {
+      background-color: black;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s ease;
+  }
+  
+  .btn-editar:hover {
+      background-color: #333;
+  }
+  .btn-lixeira {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+    transition: transform 0.2s ease;
+}
+
+.btn-lixeira:hover {
+    transform: scale(1.2);
+}

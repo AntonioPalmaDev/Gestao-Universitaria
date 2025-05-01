@@ -1,11 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Criação de Turmas</title>
+    <link rel="stylesheet" href="turma.css"> <!-- aqui você coloca o caminho do seu CSS -->
 </head>
 <body>
-    <h1>TURMA</h1>
+
+    <header id="menu">
+        <a href="../index/index.html">
+            <img src="../img/G-U-28-03-2025.png" alt="logo" id="logo">
+        </a>
+    </header>
+
+    <main>
+        <h1>Turmas</h1>
+
+        <section class="form-section">
+            <select name="curso" required>
+                <option value="">Escolha o curso</option>
+                <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+                <option value="engsoft">Engenharia de Software</option>
+               
+            </select>
+
+            <select name="professor" required>
+                <option value="">Escolha o professor</option>
+                <option value="joao">Prof. João</option>
+                <option value="maria">Prof. Maria</option>
+             
+            </select>
+
+            <input type="text" name="codTurma" placeholder="Código da Turma" required>
+            <input type="text" name="disciplina" placeholder="Disciplina" required>
+            <input type="text" name="sala" placeholder="Sala" required>
+
+            <button type="submit" id="inserirBtn">Inserir</button>
+        </section>
+
+        <!-- Campo de Busca -->
+        <div class="search-container">
+            <input type="text" id="busca" placeholder="Buscar grade..." oninput="filtrarTabela()" />
+            <span class="lupa-icon">🔍</span>
+          </div>
+
+        <!-- Tabela de Turmas -->
+        <section class="tabela-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>COD DA TURMA</th>
+                        <th>DISCIPLINA</th>
+                        <th>PROFESSOR</th>
+                        <th>SALA</th>
+                        <th>AÇÕES</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-registros">
+                    <tr>
+                        <td>ADS101</td>
+                        <td>Programação Web</td>
+                        <td>Prof. João</td>
+                        <td>105</td>
+                        <td><button class="btn-editar">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td>ENG202</td>
+                        <td>Engenharia de Requisitos</td>
+                        <td>Prof. Maria</td>
+                        <td>204</td>
+                        <td><button class="btn-editar">Editar</button></td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+        </section>
+    </main>
+
 </body>
+<script src="turma.js"></script>
+
 </html>

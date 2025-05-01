@@ -1,60 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão Universitaria</title>
+    <title>Gestão Universitária - Faltas e Notas</title>
     <link rel="shortcut icon" href="../img/G-U-28-03-2025.png" type="image/x-icon">
     <link rel="stylesheet" href="../faltasnotas/faltas&notas.css">
 </head>
-
 <body>
+
     <header id="menu">
         <a href="../index/index.html">
             <img src="../img/G-U-28-03-2025.png" alt="logo" id="logo">
         </a>
-        
-        
     </header>
-  
 
-    <section id="form-faltas-notas">
-        <h2>Adicionar Nota / Falta</h2>
-        <form id="notasForm">
-            <label for="aluno">Aluno:</label>
-            <select id="aluno" required>
-                <option value="">Selecione</option>
+    <main>
+        <h1>Faltas e Notas</h1>
+
+        <section class="form-section">
+            <input type="text" id="matriculaAluno" placeholder="Matrícula" />
+
+            <select id="tipoRegistro">
+                <option value="">Selecione Falta ou Nota</option>
+                <option value="Falta">Falta</option>
+                <option value="Nota">Nota</option>
             </select>
 
-            <label for="nota">Nota:</label>
-            <input type="number" step="0.1" id="nota" min="0" max="10">
+            <select id="disciplinaRegistro">
+                <option value="">Selecione a disciplina</option>
+                
+            </select>
 
-            <label for="falta">Faltas:</label>
-            <input type="number" id="falta" min="0">
+            <input type="text" id="valorRegistro" placeholder="Valor" />
 
-            <button type="submit">Salvar</button>
-        </form>
-    </section>
+            <button onclick="inserirRegistro()">Inserir</button>
+        </section>
 
-    <section id="lista-notas">
-        <h2>Histórico de Notas e Faltas</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Aluno</th>
-                    <th>Nota</th>
-                    <th>Faltas</th>
-                </tr>
-            </thead>
-            <tbody id="tabela-notas">
-                <!-- Dados serão carregados via JS -->
-            </tbody>
-        </table>
-    </section>
+        <div class="search-container">
+            <input type="text" id="busca" placeholder="Buscar matrícula ou disciplina..." oninput="filtrarTabela()" />
+            <span class="lupa-icon">🔍</span>
+        </div>
 
-    <script src="faltas_notas.js"></script>
-</body>
-</html>
+        <section class="tabela-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>MATRÍCULA</th>
+                        <th>DISCIPLINA</th>
+                        <th>TIPO</th>
+                        <th>VALOR</th>
+                        <th>AÇÕES</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-registros">
+
+
+                    <tr>
+                        <td>1</td>
+                        <td>Banco 1</td>
+                        <td>Nota</td>
+                        <td>8.5</td>
+                        <td><button class="btn-editar">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Banco 1</td>
+                        <td>Falta</td>
+                        <td>1</td>
+                        <td><button class="btn-editar">Editar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="faltas&notas.js"></script>
 
 </body>
 </html>

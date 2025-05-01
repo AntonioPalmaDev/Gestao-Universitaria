@@ -31,7 +31,7 @@
       
           <ul id="lista-disciplinas"></ul>
       
-          <button onclick="inserirGrade()">Inserir Grade</button>
+          <button onclick="inserirGrade()">Inserir</button>
         </section>
       
         <section class="tabela-section">
@@ -46,10 +46,23 @@
                 <th>GRADE-CURRICULAR</th>
                 <th>CURSO</th>
                 <th>DISCIPLINAS</th>
+                <th>AÇÕES</th>
               </tr>
             </thead>
             <tbody id="tabela-corpo">
-              <!-- Itens vão ser inseridos aqui -->
+
+              <tr>
+                <td>2022.2</td>
+                <td>Psicologia</td>
+                <td>Mentes Pensantes, Mente Psicologia, alegria da mente</td>
+                <td><button class="btn-editar">Editar</button></td>
+            </tr>
+            <tr>
+              <td>2022.1</td>
+              <td>Engenharia de Software</td>
+              <td>Banco 1 , Banco 2 , Banco avançado</td>
+              <td><button class="btn-editar">Editar</button></td>
+          </tr>
             </tbody>
           </table>
         </section>
@@ -58,7 +71,7 @@
     <section id="lista-grade">
         
         <ul id="lista-disciplinas">
-            <!-- Disciplinas serão carregadas via JS -->
+            
         </ul>
     </section>
 

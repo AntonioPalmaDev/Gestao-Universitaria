@@ -1,6 +1,44 @@
+
+async function cadastrarUsuario() {
+  const nome = document.querySelector('#campo-nome').value;
+  const tipo = document.querySelector('#campo-tipo').value;
+
+  const resposta = await fetch('/usuarios', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ nome, tipo })
+  });
+
+  if (resposta.ok) {
+    document.querySelector('#campo-nome').value = '';
+    atualizarTabela();
+  }
+}
+
+
+
+
+async function atualizarTabela() {
+  const res = await fetch('/usuarios');
+  const usuarios = await res.json();
+
+  const tabela = document.querySelector('#tabela-usuarios');
+  tabela.innerHTML = '';
+
+  usuarios.forEach(usuario => {
+    const linha = `<tr>
+      <td>${usuario.matricula}</td>
+      <td>${usuario.nome}</td>
+      <td>${usuario.tipo}</td>
+    </tr>`;
+    tabela.innerHTML += linha;
+  });
+}
+
+// Carrega tabela ao iniciar
+document.addEventListener('DOMContentLoaded', atualizarTabela);
+
 const botoesEditar = document.querySelectorAll('.btn-editar');
-
-
 botoesEditar.forEach(botao => {
   botao.addEventListener('click', () => {
       const linha = botao.parentElement.parentElement; // Linha <tr> do botão
@@ -44,22 +82,3 @@ botoesEditar.forEach(botao => {
       }
   });
 });
-function filtrarTabela() {
-    const termo = document.getElementById("busca").value.toLowerCase();
-    const linhas = document.querySelectorAll("#tabela-registros tr");
-   
-  
-    linhas.forEach(linha => {
-        const colMatricula = linha.children[0]?.textContent.toLowerCase() || "";
-        const colDisciplina = linha.children[1]?.textContent.toLowerCase() || "";
-        const colTipo = linha.children[2]?.textContent.toLowerCase() || "";
-        const colValor = linha.children[3]?.textContent.toLowerCase() || "";
-
-
-
-
-
-      const corresponde = colMatricula.includes(termo) || colDisciplina.includes(termo) || colTipo.includes(termo) || colValor.includes(termo); 
-      linha.style.display = corresponde ? "" : "none";
-    });
-  }

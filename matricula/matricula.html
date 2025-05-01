@@ -24,20 +24,20 @@
             
             <input type="text" id="matriculaAluno" placeholder="Matrícula" />
           
-            <!-- Curso será um select -->
+          
             <select id="cursoMat" onchange="carregarGradesMatricula()">
               <option value="">Selecione o curso</option>
-              <!-- Cursos preenchidos via JS -->
+             
             </select>
           
-            <!-- Grade também será um select -->
+           
             <select id="gradeMat" onchange="carregarDisciplinasMatricula()">
               <option value="">Selecione a grade</option>
             </select>
           
             <input type="text" id="semestreMat" placeholder="Semestre" />
           
-            <!-- Lista de disciplinas (só visual) -->
+        
             <ul id="lista-disciplinas-mat"></ul>
           
             <button onclick="inserirMatricula()">Inserir</button>
@@ -45,7 +45,7 @@
           
       
         <div class="search-container">
-          <input type="text" id="buscaMatricula" placeholder="Buscar matrícula ou nome..." oninput="filtrarMatricula()" />
+          <input type="text" id="busca" placeholder="Buscar matrícula ou nome..." oninput="filtrarTabela()" />
           <span class="lupa-icon">🔍</span>
         </div>
       
@@ -53,15 +53,38 @@
           <table>
             <thead>
               <tr>
-                <th>NOME</th>
                 <th>MATRICULA</th>
+                <th>NOME</th>
                 <th>CURSO</th>
                 <th>GRADE-CURRICULAR</th>
                 <th>SEMESTRE</th>
-                <th>DISCIPLINAS</th>
+                <th>AÇÕES</th>
               </tr>
             </thead>
-            <tbody id="tabela-matriculas"></tbody>
+            <tbody id="tabela-registros">
+
+
+
+              <tr>
+                <td>1</td>
+                <td>João Silva</td>
+                <td>Engenharia de Software</td>
+                <td> 2022.1</td>
+                <td>2025.1</td>
+
+                <td><button class="btn-editar">Editar</button></td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>Pedrao</td>
+              <td>Psicologia</td>
+              <td> 2022.1</td>
+              <td>2025.2</td>
+
+              <td><button class="btn-editar">Editar</button></td>
+          </tr>
+            </tbody>
           </table>
         </section>
       </main>

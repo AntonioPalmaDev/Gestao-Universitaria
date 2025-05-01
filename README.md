@@ -22,9 +22,8 @@ Uma aplicação web simples e funcional para administração acadêmica de insti
 ## 🛠️ Tecnologias Utilizadas
 
 - **Frontend:** HTML5, CSS3 e JavaScript puro    
-- **Backend:** Node.js com Express  
-- **Banco de Dados:** PostgreSQL 
-- 
+
+
 
 > 🔐 *Este sistema é voltado para uso administrativo e não possui autenticação.*
 
