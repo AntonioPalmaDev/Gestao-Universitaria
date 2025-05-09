@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  body {
+    background-color: #f5f5f5;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  
+  main {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  #menu {
+    background-color: black;
+    height: 60px;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  #logo {
+    width: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+  }
+  #menu-interrativo{
+
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    align-items: center;
+    
+    
+    }
+    #link{
+
+        margin: auto;
+        
+        }
+    #logoindex{
+
+        width: 150px;
+        
+        }
+  #bottons{
+    display: flex;
+    padding: 30px;
+    background-color: rgb(169, 182, 182);
+    margin-left: 10px;
+    border-color: black;
+    border-radius: 10px;
+    height: 150px;
+    width: 150px;
+    justify-content: center;
+    box-shadow: 5px 5px 10px gray;
+    }
+    #bottons:hover{
+    background-color: azure;
+    }
+  .form-section {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-section input,
+  .form-section select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+  }
+  
+  .form-section button {
+    background-color: #ccc;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: center;
+    width: 100px;
+  }
+  
+  .form-section button:hover {
+    background-color: #bbb;
+  }
+
+  .disciplinas-box{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+  }
+
+  #lista-disciplinas {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  #lista-disciplinas li {
+    background: #fff;
+    margin: 4px auto;
+    padding: 6px;
+    width: 200px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+  }
+
+  
+  .search-container {
+    position: relative;
+    width: 300px;
+    margin: 20px auto;
+  }
+  
+  .search-container input {
+    width: 100%;
+    padding: 8px 30px 8px 10px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+  }
+  
+  .lupa-icon {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    font-size: 18px;
+    pointer-events: none;
+  }
+  .tabela-section {
+    overflow-x: auto;
+    margin-top: 30px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+  }
+  
+  td {
+    background-color: #f9f9f9;
+  }
+  .btn-editar, .editar {
+    background-color: black;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s ease;
+  }
+  
+  .btn-editar:hover {
+    background-color: #333;
+  }
+  
+  .btn-lixeira {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+    transition: transform 0.2s ease;
+  }
+  
+  .btn-lixeira:hover {
+    transform: scale(1.2);
+  }
+
